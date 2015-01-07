@@ -1,0 +1,21 @@
+{
+    "name": "coksnuss/yii2-cli-layoutbuilder",
+    "description": "Allows to render complex ASCII GUI's on console.",
+    "keywords": ["yii2", "console", "cli", "gui"],
+    "type": "yii2-extension",
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "Markus Schanz",
+            "email": "coksnuss@googlemail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "coksnuss\\cli\\layoutbuilder\\": ""
+        }
+    }
+}
