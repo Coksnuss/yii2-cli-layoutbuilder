@@ -25,3 +25,32 @@ composer require --prefer-dist "coksnuss/yii2-cli-layoutbuilder"
 
 Thats it. Check the new extension folder to see which classes are available and
 how to use or extend from them.
+
+Usage
+-----
+
+Below is some example code to get you started.
+
+~~~
+$frameTop = Yii::createObject(['class' => GuiFrame::className(), 'layout' => GuiFrame::LAYOUT_HORIZONTAL, 'border' => 1]);
+$frameTop->addElement('Test1.1');
+$frameTop->addElement('Test1.2');
+$frameTop->addElement('Test1.3');
+
+$frameBottom = Yii::createObject(['class' => GuiFrame::className(), 'layout' => GuiFrame::LAYOUT_HORIZONTAL]);
+
+$frameLeft = Yii::createObject(['class' => GuiFrame::className(), 'layout' => GuiFrame::LAYOUT_VERTICAL, 'border' => 1]);
+$frameLeft->addElement('Left Frame 1.1');
+$frameLeft->addElement('Left Frame 1.2');
+$frameRight = Yii::createObject(['class' => GuiFrame::className(), 'layout' => GuiFrame::LAYOUT_VERTICAL, 'border' => 1]);
+$frameRight->addElement('Right Frame 1.1234567');
+$frameRight->addElement('Right Frame 1.2');
+$frameRight->addElement('Right Frame 1.3');
+
+$frameBottom->addElement($frameLeft);
+$frameBottom->addElement($frameRight);
+$gui->addElement($frameTop);
+$gui->addElement($frameBottom);
+
+echo $gui->render() . PHP_EOL;
+~~~

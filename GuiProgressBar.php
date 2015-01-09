@@ -8,7 +8,7 @@ class GuiProgressBar extends GuiElement
     public $progress;
     public $total;
 
-    public function render()
+    protected function asText()
     {
         return 'Not implemented';
     }

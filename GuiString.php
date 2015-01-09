@@ -5,8 +5,9 @@ class GuiString extends GuiElement
 {
     public $string;
 
-    public function render()
+    protected function asText()
     {
-        return sprintf(sprintf('%%-%u.%us', $this->width, $this->width), $this->string);
+        return $this->string;
+        //return sprintf(sprintf('%%-%u.%us', $this->width, $this->width), $this->string);
     }
 }
